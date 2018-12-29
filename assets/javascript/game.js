@@ -34,19 +34,16 @@ document.onkeyup = function () {
     var LetterDisp = String.fromCharCode(Letter);
     var LetterDispuc = LetterDisp.toUpperCase()
 
-if (LetterDispuc === random){
+if (LetterDispuc === Random.toUpperCase()){
     W++;
    alert("You Have Won!!");
     Random=(
         String.fromCharCode(
           Math.floor(Math.random() * 26) + 97
         ));
-    var random= Random.toUpperCase();
     guessesLeft = 10;
     clearguesses ()
-
 }
-
 else if(guessesLeft === 0){
     L++;
     //alert(You Have Won!!);
@@ -54,7 +51,6 @@ else if(guessesLeft === 0){
         String.fromCharCode(
           Math.floor(Math.random() * 26) + 97
         ));
-    var random= Random.toUpperCase();
     guessesLeft = 10; 
     clearguesses ()
 }
